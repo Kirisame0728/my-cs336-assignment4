@@ -44,11 +44,12 @@ def run_classify_quality(text: str) -> tuple[Any, float]:
 
 
 def run_gopher_quality_filter(text: str) -> bool:
-    raise NotImplementedError
+    from cs336_data.gopher_quality_filters import run_gopher_rules
+    return run_gopher_rules(text)
 
 
 def run_exact_line_deduplication(
-    input_files: list[os.PathLike], output_directory: os.PathLike
+        input_files: list[os.PathLike], output_directory: os.PathLike
 ):
     raise NotImplementedError
 
