@@ -1,4 +1,5 @@
 import gzip
+import json
 import random
 import requests
 import re
@@ -87,3 +88,10 @@ def normalize_text_for_training(text: str, max_chars: int = 20000) -> str:
     if len(text) > max_chars:
         text = text[:max_chars]
     return text
+
+def read_jsonl(path):
+    records = []
+    with open(path, "r", encoding="utf8") as f:
+        for line in f:
+            records.append(json.loads(line))
+    return records
