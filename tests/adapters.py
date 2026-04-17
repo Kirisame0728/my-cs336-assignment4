@@ -40,7 +40,8 @@ def run_classify_toxic_speech(text: str) -> tuple[Any, float]:
     return classify_toxic_speech(text)
 
 def run_classify_quality(text: str) -> tuple[Any, float]:
-    raise NotImplementedError
+    from cs336_data.quality_classifier.quality_inference import classify_quality
+    return classify_quality(text)
 
 
 def run_gopher_quality_filter(text: str) -> bool:

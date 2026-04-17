@@ -11,7 +11,7 @@ def main():
     parser.add_argument("--negative_jsonl", type=str, required=True)
     parser.add_argument("--train_out", type=str, default="data/train_set/quality_train.txt")
     parser.add_argument("--valid_out", type=str, default="data/train_set/quality_valid.txt")
-    parser.add_argument("--valid_ratio", type=float, default=0.1)
+    parser.add_argument("--valid_ratio", type=float, default=0.05)
     args = parser.parse_args()
 
     pos = read_jsonl(args.positive_jsonl)

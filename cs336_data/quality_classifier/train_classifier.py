@@ -8,7 +8,7 @@ def main():
     parser.add_argument("--valid_file", type=str, default="data/train_set/quality_valid.txt")
     parser.add_argument("--model_out", type=str, default="data/quality_classifier.bin")
     parser.add_argument("--lr", type=float, default=0.5)
-    parser.add_argument("--epoch", type=int, default=20)
+    parser.add_argument("--epoch", type=int, default=100)
     parser.add_argument("--dim", type=int, default=100)
     parser.add_argument("--wordNgrams", type=int, default=2)
     args = parser.parse_args()
